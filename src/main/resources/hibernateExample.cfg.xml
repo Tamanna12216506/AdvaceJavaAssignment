@@ -8,8 +8,8 @@
 
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TestHibernate?createDatabaseIfNotExist=true</property>
-        <property name="hibernate.connection.username">User</property>
-        <property name="hibernate.connection.password">dbpass</property>
+        <property name="hibernate.connection.username">Username</property>
+        <property name="hibernate.connection.password">dbpassword</property>
 
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
