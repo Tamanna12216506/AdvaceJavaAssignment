@@ -29,11 +29,11 @@ public class App {
         prod.setDesc("Upto 8 hours playback");
         prod.setPrice(788.00);
         prod.setQuantity(5);
-        prod.setSku("Spk90");
+        prod.setSku("Spk90-" + System.currentTimeMillis());
         prod.setActive(true);
         createProduct(prod);
         System.out.println(readProduct(prod.getId()));
-        updateProduct(prod.getId(),899.00);
+        updateProduct(prod.getId(), 899.00);
         deleteProduct(prod.getId());
         sessionFactory.close();
 
@@ -59,6 +59,7 @@ public class App {
         if(p==null) {
             System.out.println("Product with id " + id + " does not exist");
             tx.rollback();
+            session.close();
             return;
         }
         p.setPrice(newPrice);
